@@ -1,0 +1,139 @@
+/* body */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: #333;
+    color: black;
+}
+
+.logo {
+    grid-column: 1;
+    color: black;
+}
+
+.navigation {
+    grid-column: 2;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.navigation ul li {
+    position: relative;
+}
+
+.navigation ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.navigation ul li .dropdown {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.navigation ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.dropdown li a {
+    padding: 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #555;
+}
+
+.contact {
+    grid-column: 3;
+    text-align: right;
+    color: black;
+}
+
+/* main */
+main {
+    flex: 1;
+    margin-top: 60px; /* чтобы контент не перекрывался фиксированным header */
+}
+
+/* footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff;
+}
