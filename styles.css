@@ -1,7 +1,9 @@
 /* body */
-body, html {
+.body-standart {
     margin: 0;
     padding: 0;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 .page-container {
@@ -11,41 +13,53 @@ body, html {
 }
 
 /* header */
-header {
+.header-main {
     display: grid;
+
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+
     background-color: transparent;
     color: white;
-    padding: 10px 20px;
-    position: absolute;
     width: 100%;
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .scrolled {
     position: fixed;
-    top: 0;
-    background-color: #333;
+
     color: black;
+    background-color: #333;
 }
 
-.logo {
+.logo-header-main {
     grid-column: 1;
+
+    text-align: center;
     color: black;
+    /* background-color: aqua; */
+}
+
+.logo-img {
+    max-width: 75px;
+    max-height: 75px;
+    width: auto;
+    height: auto; 
 }
 
 .navigation {
     grid-column: 2;
+
+    /* background-color: yellow; */
 }
 
 .navigation ul {
-    list-style: none;
     display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
     position: relative;
+
+    list-style: none;
+    justify-content: space-around;
 }
 
 .navigation ul li {
@@ -53,53 +67,57 @@ header {
 }
 
 .navigation ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 10px;
     display: block;
+
+    color: black;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .navigation ul li .dropdown {
     display: block;
+
     opacity: 0;
+
     visibility: hidden;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
+
     padding: 0;
     margin: 0;
+
+    color: gray;
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.5); 
     list-style: none;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .navigation ul li:hover .dropdown {
     opacity: 1;
+
     visibility: visible;
+
     transition-delay: 0.3s;
 }
 
-.dropdown li a {
-    padding: 10px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-}
-
 .dropdown li a:hover {
-    background-color: #555;
+    color: purple;
 }
 
-.contact {
+.contact-header {
     grid-column: 3;
-    text-align: right;
+
     color: black;
+    /* background-color: gray; */
+
+    text-align: center;
 }
 
 /* main */
-main {
+.main-main {
     flex: 1;
-    margin-top: 60px; /* чтобы контент не перекрывался фиксированным header */
 }
 
 /* footer */
